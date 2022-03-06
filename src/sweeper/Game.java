@@ -97,4 +97,8 @@ public class Game {
       }
     }
   }
+
+  public int getBombsLeft() {
+    return bomb.getTotalBombs();
+  }
 }
