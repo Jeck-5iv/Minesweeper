@@ -84,10 +84,18 @@ public class Minesweeper extends JFrame {
 
   private String getMessage() {
     switch (game.getState()) {
-      case PLAYED : return "Think hard - there are " + game.getBombsLeft() + " mines in game.";
-      case BOMBED : return "BOOOOOOOOOOOM. You lost.";
-      case WINNER : return "CONGRATULATIONS, YOU WON !!!";
-      default: return "Good luck.";
+      case PLAYED -> {
+        return "Think hard - there are " + game.getBombsLeft() + " mines in game.";
+      }
+      case BOMBED -> {
+        return "BOOOOOOOOOOOM. You lost.";
+      }
+      case WINNER -> {
+        return "CONGRATULATIONS, YOU WON !!!";
+      }
+      default -> {
+        return "Good luck.";
+      }
     }
   }
 
